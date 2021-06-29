@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/RalphLynch/germanGrammarWebsite/issues"
   },
-  "homepage": "https://github.com/RalphLynch/germanGrammarWebsite#readme"
+  "homepage": "https://github.com/RalphLynch/germanGrammarWebsite#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
