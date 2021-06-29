@@ -1,0 +1,19 @@
+{
+  "name": "germangrammarwebsite",
+  "version": "1.0.0",
+  "description": "A website for learning German grammar",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RalphLynch/germanGrammarWebsite.git"
+  },
+  "author": "Ralph Lynch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RalphLynch/germanGrammarWebsite/issues"
+  },
+  "homepage": "https://github.com/RalphLynch/germanGrammarWebsite#readme"
+}
