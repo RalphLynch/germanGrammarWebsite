@@ -6,7 +6,7 @@ const port = 3000;
 // Loads the static HTML files for the website
 app.use(express.static('website'));
 
-app.use(express.json())
+app.use(express.urlencoded);
 
 app.listen(port, () => {
     // Listens for anyone connecting to the website
@@ -18,10 +18,9 @@ app.post('/checkAnswers', (req, res) => {
     let exerciseName = req.header('Referer').split("/").pop().slice(0, -5);
 
     console.log(req.body);
+
+    // Reads the solutions to the questions from a JSON file
     let solutionsObject = JSON.parse(fs.readFileSync(__dirname + `/solutions/${exerciseName}Solutions.json`));
 
     var score = 0;
-
-    for (let i = 0; i < solutionsObject.solutions.length; i++) {
-    }
 })
