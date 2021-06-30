@@ -1,3 +1,4 @@
+const fs = require('fs');
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -13,4 +14,6 @@ app.listen(port, () => {
 app.post('/checkAnswers', (req, res) => {
     // Extracts the name of the exercise from the Referer HTTP header
     let exerciseName = req.header('Referer').split("/").pop().slice(0, -5);
+
+    let solutions = JSON.parse(fs.readFileSync(__dirname + `/solutions/${exerciseName}Solutions.json`));
 })
