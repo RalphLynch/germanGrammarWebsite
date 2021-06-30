@@ -1,5 +1,5 @@
-function loadQuestions() {
-    const questions = new Request('http://localhost:3000/adjectives1Questions.json');
+function loadQuestions(exercise) {
+    const questions = new Request(`http://localhost:3000/${exercise}Questions.json`);
 
     fetch(questions)
     .then(response => response.json())
