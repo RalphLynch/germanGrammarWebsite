@@ -5,7 +5,7 @@ function loadQuestions() {
     .then(response => response.json())
     .then(data => {
         for (let i = 0; i < data.questions.length; i++) {
-            document.getElementById(`question${i}`).innerHTML(data.questions[i]);
+            document.getElementById(`question${i + 1}`).innerHTML = data.questions[i];
         }
     })
 }
