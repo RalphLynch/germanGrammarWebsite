@@ -29,4 +29,7 @@ app.post('/checkAnswers', (req, res) => {
         }
         i++
     }
+
+    // Sends the score to the website
+    res.send(`<a href="index.html">Home</a><br>Score: ${score}`);
 })
