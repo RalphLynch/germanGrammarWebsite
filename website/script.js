@@ -4,6 +4,7 @@ function loadQuestions(exercise) {
 
     // Fetches the question file
     fetch(questions)
+    // Converts response to JSON
     .then(response => response.json())
     .then(data => {
         // Inserts each question into an ordered list
