@@ -1,6 +1,9 @@
 {
     "questions": [
-        "Der groß<input type=\"text\" maxlength=\"2\" size=\"10\" name=\"question1\"> Man.",
-        "Ich gebe dem klein<input type=\"text\" maxlength=\"2\" size=\"10\" name=\"question2\"> Kind den Apfel."
+        "Der groß<input type=\"text\" maxlength=\"2\" size=\"2\" name=\"question1\"> Man.",
+        "Ich gebe dem klein<input type=\"text\" maxlength=\"2\" size=\"2\" name=\"question2\"> Kind den Apfel.",
+        "Das schnell<input type=\"text\" maxlength=\"2\" size=\"2\" name=\"question3\"> Auto.",
+        "Die Tür des grün<input type=\"text\" maxlength=\"2\" size=\"2\" name=\"question4\"> Hauses.",
+        "Ich bin so faul<input type=\"text\" maxlength=\"2\" size=\"2\" name=\"question5\">."
     ]
 }
