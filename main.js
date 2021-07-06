@@ -6,6 +6,7 @@ const port = 3000;
 // Loads the static HTML files for the website
 app.use(express.static('website'));
 
+// Converts POST request bodies to JSON
 app.use(express.urlencoded());
 
 app.listen(port, () => {
