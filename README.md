@@ -8,4 +8,4 @@ Type
 
 into a terminal.
 
-Then connect to [localhost:3000](localhost:3000)
+Then connect to [localhost:3000](http://localhost:3000)
