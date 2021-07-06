@@ -23,12 +23,12 @@ app.post('/checkAnswers', (req, res) => {
 
     // Checks the answers and adds up the score
     var score = 0;
-    var i = 0
+    var i = 0;
     for (let key in req.body) {
         if (req.body[key] === solutionsObject.solutions[i]) {
             score++;
         }
-        i++
+        i++;
     }
 
     // Sends the score to the website
