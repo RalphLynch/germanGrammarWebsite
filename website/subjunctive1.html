@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <title>Subjunctive 1</title>
+    <meta charset="UTF-8">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Subjunctive 1</h1>
+
+    <!--Navigation bar for the site-->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+    <!--Runs the function to load the questions-->
+    <button type="button" id="loadQuestions" onclick="loadQuestions('subjunctive1')">Load Questions</button>
+    <form action="/checkAnswers" method="post">
+        <ol>
+            <li id="question1"></li>
+            <li id="question2"></li>
+            <li id="question3"></li>
+            <li id="question4"></li>
+            <li id="question5"></li>
+        </ol>
+        <input type="submit">Check score</input>
+    </form>
+</body>
