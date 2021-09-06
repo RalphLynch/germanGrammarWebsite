@@ -1,0 +1,9 @@
+{
+    "questions": [
+        "Er geh<input type=\"text\" maxlength=\"3\" size=\"3\" name=\"question1\"> zu Hause.",
+        "Ihr kauf<input type=\"text\" maxlength=\"3\" size=\"3\" name=\"question2\"> Süßigkeiten.",
+        "Sie schlaf<input type=\"text\" maxlength=\"3\" size=\"3\" name=\"question3\"> im Bett.",
+        "Du denk<input type=\"text\" maxlength=\"3\" size=\"3\" name=\"question4\"> das nicht.",
+        "Er trink<input type=\"text\" maxlength=\"3\" size=\"3\" name=\"question5\"> eine Cola."
+    ]
+}
