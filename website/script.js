@@ -1,9 +1,11 @@
+var selectedQuestions;
+
 function loadQuestions(exercise) {
     // Generates the URL for the file containing the questions
     const questions = new Request(`http://localhost:3000/${exercise}Questions.json`);
 
     // Stores questions that have been selected to be displayed
-    let selectedQuestions = new Array(0);
+    selectedQuestions = new Array(0);
 
     // Fetches the question file
     fetch(questions)
@@ -27,4 +29,9 @@ function loadQuestions(exercise) {
             selectedQuestions.push(questionIndex);
         }
     })
+}
+
+function checkAnswers(exercise) {
+    const solutions = new Request(`http://localhost:3000/${exercise}Solutions.json`);
+    fetch(solutions);
 }
