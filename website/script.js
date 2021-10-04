@@ -32,6 +32,19 @@ function loadQuestions(exercise) {
 }
 
 function checkAnswers(exercise) {
+    let score = 0;
     const solutions = new Request(`http://localhost:3000/${exercise}Solutions.json`);
-    fetch(solutions);
+    console.log(solutions);
+    fetch(solutions)
+    .then(response => response.json())
+    .then(data => {
+        for (let i = 0; i < 5; i++) {
+            //console.log(data.solutions[selectedQuestions[i]]);
+            console.log(document.getElementById(`solution${i + 1}`).innerHTML);
+            if (data.solutions[selectedQuestions[i]] == document.getElementById(`question${i + 1}`).innerHTML) {
+                score++;
+            }
+        }
+    })
+    document.getElementById("score").innerHTML = score;
 }
