@@ -1,5 +1,7 @@
 const fs = require('fs');
 const express = require('express');
+const cookieParser = require('cookie-parser');
+const cookie-parser = require('cookie-parser');
 const app = express();
 const port = 3000;
 
@@ -8,6 +10,9 @@ app.use(express.static('website'));
 
 // Converts POST request bodies to JSON
 app.use(express.urlencoded());
+
+// Parses cookies
+app.use(cookieParser());
 
 app.listen(port, () => {
     // Listens for anyone connecting to the website
