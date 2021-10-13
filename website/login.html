@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <title>Login/Create Account</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Login/Create Account</h1>
+
+    <!--Navigation bar for the site-->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+
+    <h2>Create Account</h2>
+    <form action="/createAcount" method="post">
+        <label for="username1">Username:</label>
+        <input type="text" id="username1" minlength="1" maxlength="100" size="14">
+        <label for="password1">Password</label>
+        <input type="password" id="password1" minlength="1" maxlength="100" size="14">
+        <input type="submit" value="Create Account">
+    </form>
+
+    <h2>Login</h2>
+    <form action="/login" method="post">
+        <label for="username2">Username:</label>
+        <input type="text" id="username2" minlength="1" maxlength="100" size="14">
+        <label for="password2">Password</label>
+        <input type="password" id="password2" minlength="1" maxlength="100" size="14">
+        <input type="submit" value="Login">
+    </form>
+</body>
