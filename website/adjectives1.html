@@ -2,7 +2,7 @@
 <head>
     <title>Adjectives 1</title>
     <meta charset="UTF-8">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <h1>Adjectives 1</h1>
@@ -15,7 +15,7 @@
     </nav>
     <!--Runs the function to load the questions-->
     <button type="button" id="loadQuestions" onclick="loadQuestions('adjectives1')">Load Questions</button>
-    <!--<form action="/checkAnswers" method="post" autocomplete="off">-->
+    <form action="javascript:checkAnswers('adjectives1')" id="quiz" autocomplete="off">
         <ol>
             <li id="question1"></li>
             <li id="question2"></li>
@@ -23,7 +23,7 @@
             <li id="question4"></li>
             <li id="question5"></li>
         </ol>
-        <button onclick="checkAnswers('adjectives1')">Check score</button>
-    <!--</form>-->
+        <input type="submit" value="Check Score">
+    </form>
     <p>Score: <div id="score"></div></p>
 </body>

@@ -15,7 +15,7 @@
     </nav>
     <!--Runs the function to load the questions-->
     <button type="button" id="loadQuestions" onclick="loadQuestions('subjunctive1')">Load Questions</button>
-    <form action="/checkAnswers" method="post" autocomplete="off">
+    <form action="javascript:checkAnswers('subjunctive1')" autocomplete="off">
         <ol>
             <li id="question1"></li>
             <li id="question2"></li>
@@ -23,6 +23,7 @@
             <li id="question4"></li>
             <li id="question5"></li>
         </ol>
-        <input type="submit">Check score</input>
+        <input type="submit" value="Check Score">
     </form>
+    <p>Score: <div id="score"></div></p>
 </body>

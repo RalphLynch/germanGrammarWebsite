@@ -31,20 +31,23 @@ function loadQuestions(exercise) {
     })
 }
 
-function checkAnswers(exercise) {
+async function checkAnswers(exercise) {
     let score = 0;
+    let quiz = document.getElementById("quiz").elements;
     const solutions = new Request(`http://localhost:3000/${exercise}Solutions.json`);
-    console.log(solutions);
-    fetch(solutions)
+    await fetch(solutions)
     .then(response => response.json())
     .then(data => {
         for (let i = 0; i < 5; i++) {
+            //console.log(quiz[i].value);
             //console.log(data.solutions[selectedQuestions[i]]);
-            console.log(document.getElementById(`solution${i + 1}`).innerHTML);
-            if (data.solutions[selectedQuestions[i]] == document.getElementById(`question${i + 1}`).innerHTML) {
+            
+            if (data.solutions[selectedQuestions[i]] == quiz[i].value) {
                 score++;
             }
+            console.log(`loop ${i}: ${score}`);
         }
     })
+    console.log("final: " + score);
     document.getElementById("score").innerHTML = score;
 }
