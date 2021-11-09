@@ -1,8 +1,12 @@
+const sqlite3 = require('sqlite3').verbose();
 const fs = require('fs');
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const app = express();
 const port = 3000;
+
+// Opens the database
+var db = new sqlite3.Database('./websiteDatabase');
 
 // Loads the static HTML files for the website
 app.use(express.static('website'));
@@ -37,4 +41,17 @@ app.post('/checkAnswers', (req, res) => {
 
     // Sends the score to the website
     res.send(`<a href="index.html">Home</a><br>Score: ${score}`);
+})
+
+app.post('/createAccount', (req, res) => {
+    // Checks if the username submitted is already in the database
+    let username = db.get("SELECT Username FROM tblUser WHERE Username = ?", req.body[0]);
+    // If the username hasn't already been taken, create an account 
+    if (username == undefined) {
+        db.run("INSERT INTO tblUser (Username, Password) VALUES (?, ?);", req.body[0], req.body[1]);
+        res.send("Account created. <a href=\"index.html\">Home</a>");
+    } else {
+        // Otherwise send an error message and don't create an account
+        res.send("Username already taken. <a href=\"login.html\">Create account</a>");
+    }
 })
