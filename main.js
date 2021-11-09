@@ -55,3 +55,16 @@ app.post('/createAccount', (req, res) => {
         res.send("Username already taken. <a href=\"login.html\">Create account</a>");
     }
 })
+
+app.post('/login', (req, res) => {
+    // Password for the account with the given username
+    let password = db.get("SELECT Username FROM tblUser WHERE Username = ?", req.body[0]);
+    // Checks if the password supplied by the user matches the password in the database
+    if (req.body[1] == password) {
+        // If it matches, send a success message
+        res.send("You are now logged in. <a href=\"index.html\"Home</a>");
+    } else {
+        // Otherwise ask the user to try again
+        res.send("Username or password incorrect. <a href=\"login.html\">Try again</a>")
+    }
+})
