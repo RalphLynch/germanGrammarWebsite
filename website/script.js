@@ -53,6 +53,8 @@ async function checkAnswers(exercise) {
 }
 
 function insertCharacter(character, textBoxId) {
+    // Gets the value currently stored in the text box
     let textBox = document.getElementById(textBoxId).value;
+    // Appends the character to the string in the textbox, then puts it back into the text box
     document.getElementById(textBoxId).value = textBox + character;
 }
