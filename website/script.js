@@ -51,3 +51,8 @@ async function checkAnswers(exercise) {
     console.log("final: " + score);
     document.getElementById("score").innerHTML = score;
 }
+
+function insertCharacter(character, textBoxId) {
+    let textBox = document.getElementById(textBoxId).value;
+    document.getElementById(textBoxId).value = textBox + character;
+}
