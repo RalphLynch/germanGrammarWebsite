@@ -1,6 +1,6 @@
 {
     "questions": [
-        "Der groß<input id=\"textBox1\" type=\"text\" maxlength=\"2\" size=\"2\" name=\"question1\"> Mann.",
+        "Der groß<input id=\"textBox1\" type=\"text\" maxlength=\"2\" size=\"2\" name=\"question1\"> Mann.<button type=\"button\" onclick=\"insertCharacter('ä', 'textBox1')\">ä</button>",
         "Ich gebe dem klein<input id=\"textBox2\" type=\"text\" maxlength=\"2\" size=\"2\" name=\"question2\"> Kind den Apfel.",
         "Das schnell<input id=\"textBox3\" type=\"text\" maxlength=\"2\" size=\"2\" name=\"question3\"> Auto.",
         "Die Tür des grün<input id=\"textBox4\" type=\"text\" maxlength=\"2\" size=\"2\" name=\"question4\"> Hauses.",
